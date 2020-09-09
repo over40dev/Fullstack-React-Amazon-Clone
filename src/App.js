@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './components/Header';
 import './App.css';
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     // BEM
     <div className="App">
       <h1>Hello, Let's build an Amazon Store Clone <span role="img" aria-label="rocket-emoji">🚀</span></h1>
-      {/* Header */}
+      <Header/>
       {/* Home */}
     </div>
   );

@@ -16,7 +16,7 @@ function Checkout() {
         </div>
       </div>
       <div className="checkout__right">
-        <Subtotal count={5} value={3600.4}/>
+        <Subtotal />
 
         {/* <BasketItem */}
         {/* <BasketItem */}

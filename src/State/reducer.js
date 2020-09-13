@@ -2,10 +2,10 @@ export const initialState = {
   basket: [],
 };
 
-export default (state, action) => {
+const reducer = (state, action) => {
+  console.log(action.item, state);
   switch (action.type) {
     case 'ADD_TO_BASKET':
-      console.log('adding item to basket in React Context');
       return {
         ...state,
         basket: [...state.basket, action.item],
@@ -18,5 +18,4 @@ export default (state, action) => {
   }
 }
 
-
-
+export default reducer;

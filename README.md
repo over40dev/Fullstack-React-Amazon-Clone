@@ -1,3 +1,9 @@
+# Amazon Clone w/ Full E-Commerce + Stripe using React JS and Firebase
+
+Education and base code from [Clever Programmer YouTube Video](https://youtu.be/_Z6eRoagmz4)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -13,12 +13,13 @@
 }
 
 .checkoutProduct__title {
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 800;
 }
 
 .checkoutProduct > img {
-  width: 100%;
-  max-height: 180px;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
 }
 

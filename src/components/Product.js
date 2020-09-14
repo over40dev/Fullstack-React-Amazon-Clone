@@ -5,9 +5,9 @@ import './Product.css';
 function Product({id, title, image, price, rating}) {
 
   const [{basket}, dispatch] = useStateValue();
+  console.log(basket); // TODO: why does dispatch fail (says not a function) when `basket` not imported as well (we don't need basket here)
 
   const addToBasket = () => {
-    console.table(basket);
     // dispatch the item into the data layer
     dispatch({
       type: 'ADD_TO_BASKET',

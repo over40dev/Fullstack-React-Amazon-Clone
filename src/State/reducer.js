@@ -17,6 +17,7 @@ const reducer = (state, action) => {
   }
 };
 
+// Selector - best practice
 export const getBasketTotal = (basket) => {
   return basket?.reduce((total, item) => total + item.price, 0);
 }

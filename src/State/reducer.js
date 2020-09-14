@@ -15,6 +15,10 @@ const reducer = (state, action) => {
         ...state,
       }
   }
+};
+
+export const getBasketTotal = (basket) => {
+  return basket?.reduce((total, item) => total + item.price, 0);
 }
 
 export default reducer;

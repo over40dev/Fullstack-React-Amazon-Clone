@@ -1,8 +1,18 @@
 import './CheckoutProduct.css'
 import React from 'react';
+import { useStateValue } from '../State/StateProvider';
 
 function CheckoutProduct({id, image, title, price, rating}) {
-  console.log(id);
+  
+  const [{basket}, dispatch] = useStateValue();
+  console.log(basket); // TODO: why does dispatch fail (says not a function) when `basket` not imported as well (we don't need basket here)
+
+  const removeFromBasket = () => {
+    dispatch({
+      type: 'REMOVE_FROM_BASKET',
+      id
+    });
+  }
 
   return (
     <div className="checkoutProduct">
@@ -24,7 +34,7 @@ function CheckoutProduct({id, image, title, price, rating}) {
             ))}
         </div>
 
-        <button>Remove from Basket</button>
+        <button onClick={removeFromBasket}>Remove from Basket</button>
       </div>
 
     </div>

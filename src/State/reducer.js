@@ -1,5 +1,5 @@
 export const initialState = {
-  basket: [],
+  basket: []
 };
 
 const reducer = (state, action) => {
@@ -7,14 +7,18 @@ const reducer = (state, action) => {
     case 'ADD_TO_BASKET':
       return {
         ...state,
-        basket: [...state.basket, action.item],
+        basket: [
+          ...state.basket,
+          action.item
+        ]
       }
-    
+
     case 'REMOVE_FROM_BASKET':
-      // const indexToRemove = state?.basket?.findIndex(item => item.id === action.id);
-      const indexToRemove = state?.basket?.findIndex(
-        (basketItem) => basketItem.id === action.id
-      );
+      // const indexToRemove = state?.basket?.findIndex(item => item.id ===
+      // action.id);
+      const indexToRemove = state
+        ?.basket
+          ?.findIndex((basketItem) => basketItem.id === action.id);
       let newBasket = [...state.basket];
 
       if (indexToRemove >= 0) {
@@ -27,17 +31,18 @@ const reducer = (state, action) => {
         ...state,
         basket: newBasket
       }
-      
-      default:
-        return {
-          ...state,
-        }
+
+    default:
+      return {
+        ...state
       }
-    };
+  }
+};
 
 // Selector - best practice
 export const getBasketTotal = (basket) => {
-  return basket?.reduce((total, item) => total + item.price, 0);
+  return basket
+    ?.reduce((total, item) => total + item.price, 0);
 }
 
 export default reducer;

@@ -1,10 +1,23 @@
-export const firebaseConfig = {
-  apiKey: "AIzaSyBPJvyXvvdocBQxUTFZf2RzkHnbiEC-iVs",
-  authDomain: "launchpad-clones.firebaseapp.com",
-  databaseURL: "https://launchpad-clones.firebaseio.com",
-  projectId: "launchpad-clones",
-  storageBucket: "launchpad-clones.appspot.com",
-  messagingSenderId: "531439066742",
-  appId: "1:531439066742:web:41b9137fa83c0e34cf0957",
-  measurementId: "G-CXSTTC10SK"
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import firebase from 'firebase';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDh4V2AGPzTOfAmK1ohE67or3jQ975DvQU",
+  authDomain: "portfolio-clones.firebaseapp.com",
+  databaseURL: "https://portfolio-clones.firebaseio.com",
+  projectId: "portfolio-clones",
+  storageBucket: "portfolio-clones.appspot.com",
+  messagingSenderId: "1080338138283",
+  appId: "1:1080338138283:web:dd6b3d09acc9d2ba00a3ee",
+  measurementId: "G-WERSM3FQBD"
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+const db = firebaseApp.firestore();
+const auth = firebase.auth();
+
+export {
+  db,
+  auth,
 };

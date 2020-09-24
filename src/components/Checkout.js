@@ -6,7 +6,12 @@ import {useStateValue} from '../State/StateProvider';
 
 function Checkout() {
 
-  const [{basket}] = useStateValue();
+  const [
+    {
+      basket,
+      user
+    }
+  ] = useStateValue();
 
   return (
     <div className="checkout">
@@ -17,18 +22,18 @@ function Checkout() {
           className="checkout__ad"/>
 
         <div>
+          <h3>Hello {user
+              ?.email}</h3>
           <h2 className="checkout__title">Your Shopping Basket</h2>
 
-          {basket.map((item, i) => (
-          <CheckoutProduct
+          {basket.map((item, i) => (<CheckoutProduct
             key={i}
             id={item.id}
             title={item.title}
             price={item.price}
             rating={item.rating}
-            image={item.image}/>
-            ))
-          }
+            image={item.image}/>))
+}
         </div>
       </div>
       <div className="checkout__right">
@@ -39,4 +44,4 @@ function Checkout() {
   )
 }
 
-export default Checkout
+export default Checkout;

@@ -4,8 +4,9 @@ import { useStateValue } from '../State/StateProvider';
 
 function CheckoutProduct({id, image, title, price, rating}) {
   
-  const [{basket}, dispatch] = useStateValue();
-  console.log(basket); // TODO: why does dispatch fail (says not a function) when `basket` not imported as well (we don't need basket here)
+  // eslint-disable-next-line no-empty-pattern
+  const [{}, dispatch] = useStateValue();
+ // TODO: why does dispatch fail (says not a function) when `basket` not imported as well (we don't need basket here)
 
   const removeFromBasket = () => {
     dispatch({
